@@ -20,7 +20,7 @@ data "aws_ami" "amazon_linux" {
 }
 
 resource "aws_instance" "jenkins" {
-  ami           = data.aws_ami.amazon_linux.id
+  ami           = "ami-040d34353aaf59871"
   instance_type = "t3.micro"
 
   subnet_id                   = aws_subnet.public.id
